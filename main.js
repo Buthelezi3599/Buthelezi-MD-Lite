@@ -4,10 +4,19 @@ const path = require('path');
 
 // Redirect temp storage away from system /tmp
 const customTemp = path.join(process.cwd(), 'temp');
-if (!fs.existsSync(customTemp)) fs.mkdirSync(customTemp, { recursive: true });
-process.env.TMPDIR = customTemp;
-process.env.TEMP = customTemp;
-process.env.TMP = customTemp;
+if (text.startsWith('+')) {
+  const cmd = text.slice(1).trim().split(' ')[0].toLowerCase();
+  // Then switch(cmd) { case 'menu': ... }
+}case 'menu':
+  const menu = `「 DL MENU 」\n.baiscope\n.fb\n.tt\n.song\n.cinesubz\n.pastpapers\n... Powered by Buthelezi 🚀`;
+  await sock.sendMessage(from, { text: menu });
+  break;case 'tt':
+  const url = text.split(' ')[1];
+  if (!url) return sock.sendMessage(from, { text: 'Send TikTok URL!' });
+  // Use axios to hit a free TikTok API or scraper
+  // Example placeholder:
+  await sock.sendMessage(from, { text: 'Downloading... (add real logic here)' });
+  break;
 
 // Auto-cleaner every 3 hours
 setInterval(() => {
