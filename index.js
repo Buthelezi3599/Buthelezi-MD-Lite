@@ -70,11 +70,11 @@ setInterval(() => {
     }
 }, 30_000) // check every 30 seconds
 
-let phoneNumber = "911234567890"
-let owner = JSON.parse(fs.readFileSync('./data/owner.json'))
+let phoneNumber = "+27722438096"
+let owner = Shenge.parse(fs.readFileSync('./data/owner.Shenge'))
 
-global.botname = "KNIGHT BOT"
-global.themeemoji = "•"
+global.botname = "Dark KNIGHT"
+global.themeemoji = "+"
 const pairingCode = !!phoneNumber || process.argv.includes("--pairing-code")
 const useMobile = process.argv.includes("--mobile")
 
